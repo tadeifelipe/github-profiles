@@ -1,13 +1,33 @@
-import React from 'react';
-import './styleSearch.css';
+import React, { Component } from 'react';
+import './style.css';
 
-export const Search = () => {
-    return(
-     <div className="container2">
-         {/* <form> */}
-            <input type="text" placeholder="username" className="teste"></input>
-            <input type="submit" className="find"></input>
-         {/* </form> */}
-     </div>  
-    );
+class Search extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            name: '',
+            avatar_url: '',
+            followers: '',
+            public_repos: '',
+            repos: [
+                
+            ]
+        }
+    }
+    
+    render(){
+        return (
+            <div className="profile">
+                <div className="info">
+
+                </div>
+                <div className="repos">
+
+                </div>
+            </div>
+        )
+    };
 }
+
+export default Search;

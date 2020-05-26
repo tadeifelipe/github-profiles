@@ -1,8 +1,8 @@
 import React from 'react';
-// import './Global.css';
+import './Global.css';
 
 import Header from './components/Header/Header';
-import { Search } from './components/Shearch/Search';
+import Search from './components/Shearch/Search';
 
 function App() {
   return (
