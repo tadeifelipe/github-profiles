@@ -3,15 +3,59 @@
     margin-left: 20%; 
 }
 
+.find{
+    width: 40%;
+    height: 100px ;
+    margin-left: 20%;
+}
+
 .info{
-    width: 200px;
+    width: 30%;
     height: 200px;
     background-color: blue;
     margin-right: 5%;
 }
 
 .repos{
-    width: 200px;
     height: 200px;
     background-color: red;
+    flex-grow: 1;
+    margin-right: 10%;
+}
+
+.username{
+    font-size: 30px;
+    border-radius: 5px 0px 0px 5px;
+    border: 1px solid gray;
+    font-family: Roboto, 'sans-serif';
+    padding: 10px;
+    width: 50%;
+}
+
+.username:focus{
+    outline-style: none;
+}
+
+.form{
+    display: flex;
+}
+
+.search{
+    background-image: url('../../assets/find.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 0px 5px 5px 0px;
+    width: 15%;
+    border: 1px solid gray;
+    background-color: #ced6e0;
+    cursor: pointer;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.search:focus{
+    outline-style: none;
+}
+
+.search:hover{
+    background-color: #dfe4ea;
 }

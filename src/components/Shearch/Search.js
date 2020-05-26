@@ -18,6 +18,13 @@ class Search extends Component {
     
     render(){
         return (
+            <>
+            <div className="find">
+                <form className="form">
+                    <input type="text" placeholder="username" className="username"></input>
+                    <button type="button" className="search"></button>
+                </form>               
+            </div>
             <div className="profile">
                 <div className="info">
 
@@ -26,6 +33,7 @@ class Search extends Component {
 
                 </div>
             </div>
+            </>
         )
     };
 }

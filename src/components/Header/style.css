@@ -13,7 +13,7 @@
     border-radius: 50px;
     background-color: #ced6e0;
     border: none;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
     cursor: pointer;
     transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
