@@ -1,0 +1,11 @@
+.container2{
+    display: flex;
+    margin-left: 20%;
+    height: 100px;
+    width: 500px;
+    background-color: red;
+};
+
+.teste {
+    background-color: blue;   
+}
