@@ -61,15 +61,7 @@ class Search extends Component {
                            onChange={this.handleInput}></input>
                     <button type="button" className="search" onClick={this.handleSearch}></button>
                 </form>               
-            </div>
-            <div className="profile">
-                <div className="info">
-
-                </div>
-                <div className="repos">
-
-                </div>
-            </div>
+            </div>            
             </>
         )
     };

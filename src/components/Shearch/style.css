@@ -1,19 +1,7 @@
-.profile{
-    display: flex;
-    margin-left: 20%; 
-}
-
 .find{
     width: 40%;
     height: 100px ;
     margin-left: 20%;
-}
-
-.info{
-    width: 30%;
-    height: 200px;
-    background-color: blue;
-    margin-right: 5%;
 }
 
 .repos{
