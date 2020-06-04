@@ -11,26 +11,36 @@ class Search extends Component {
             avatar_url: '',
             followers: '',
             public_repos: '',
-            repos: [
-                
+            repos:[
+
             ]
         }
     }
 
     handleInput = (event) => {
-        const { name, value} = event.target;
+        const {value} = event.target;
         this.setState({
-            [name]:[value]
+            username:[value]
         })
     }
 
     handleSearch = () =>{
+        if(this.state.username === ''){
+            alert('Username não pode ser vazio.');
+        }
+
        fetch(`https://api.github.com/users/${this.state.username}`)
        .then(res => {
            return res.json();
        })
        .then(res => {
             console.log(res);
+            this.setState({
+                name: res['name'],
+                avatar_url: res['avatar_url'],
+                followers: res['followers'],
+                public_repos: res['public_repos']
+            });         
 
             //find repos
             fetch(`https://api.github.com/users/${this.state.username}/repos`)
@@ -38,9 +48,12 @@ class Search extends Component {
                 return res.json();        
             })
             .then(res => {
-                for(const repo of res){
-                    console.log(repo);
+                for (const repo of res) {
+                    this.setState({
+                        repos:[...this.state.repos,repo]
+                    })
                 }
+                console.log(this.state);
             })
             .catch(err => console.log(err));
        })
