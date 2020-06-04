@@ -34,7 +34,6 @@ class Search extends Component {
            return res.json();
        })
        .then(res => {
-            console.log(res);
             this.setState({
                 name: res['name'],
                 avatar_url: res['avatar_url'],
@@ -53,11 +52,22 @@ class Search extends Component {
                         repos:[...this.state.repos,repo]
                     })
                 }
-                console.log(this.state);
+                this.handleProfile();
             })
             .catch(err => console.log(err));
        })
        .catch(err => console.log(err));
+    }
+
+    handleProfile = () =>{
+        document.getElementById('profile').style.visibility = 'visible';
+         const ELEMENTS = {
+             avatar: document.getElementById('img'),
+             name: document.getElementById('name')
+         }
+        
+         ELEMENTS.avatar.src = this.state.avatar_url;
+         ELEMENTS.name.innerHTML = this.state.name;
     }
     
     render(){
