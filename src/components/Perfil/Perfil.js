@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './style.css';
+import star from '../../assets/star.png'
 
 class Perfil extends Component{
     render(){
@@ -12,9 +13,17 @@ class Perfil extends Component{
                 <div id="repos" className="repos">
                     <div class="repo">
                         <div class="repoContent">
-                            Teste repo
+                            Teste repo                                                  
+                            <img src={star} alt="star"/>
+                            <label>Descricao teste para rep</label>
                         </div>
                     </div>
+                    <div  class="repo"></div>
+                    <div  class="repo"></div>
+                    <div  class="repo"></div>
+                    <div  class="repo"></div>
+                    <div  class="repo"></div>
+                    <div  class="repo"></div>
                     <div  class="repo"></div>
                     <div  class="repo"></div>
                     <div  class="repo"></div>

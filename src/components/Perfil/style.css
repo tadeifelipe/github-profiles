@@ -24,7 +24,6 @@
 }
 
 .repos {
-    background-color: red;
     width: 40%;
     display: flex;
     flex-wrap: wrap;
@@ -33,6 +32,7 @@
 
 .user {
     display: flex;
+    min-height: 100px;
 }
 
 .repo{
@@ -41,6 +41,7 @@
     border-radius: 10px;
     background-color: slategrey;
     transition: background-color 0.5s ease;
+    margin-bottom: 2%;
 }
 
 .repo:hover{
@@ -50,4 +51,14 @@
 .repoContent{
     padding: 10px;
     font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    height: 80%; 
+    font-weight: bold;
+}
+
+.repoContent label {
+    font-weight: normal;
 }
