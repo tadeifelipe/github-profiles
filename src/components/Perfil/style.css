@@ -42,6 +42,7 @@
     background-color: slategrey;
     transition: background-color 0.5s ease;
     margin-bottom: 2%;
+    cursor: pointer;
 }
 
 .repo:hover{

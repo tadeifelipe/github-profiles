@@ -13,7 +13,7 @@ class Perfil extends Component{
                 <div id="repos" className="repos">
                     <div class="repo">
                         <div class="repoContent">
-                            Teste repo                                                  
+                            <a >Teste repo</a>                                                  
                             <img src={star} alt="star"/>
                             <label>Descricao teste para rep</label>
                         </div>
