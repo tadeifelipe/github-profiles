@@ -29,34 +29,34 @@ class Search extends Component {
             alert('Username não pode ser vazio.');
         }
 
-       fetch(`https://api.github.com/users/${this.state.username}`)
-       .then(res => {
-           return res.json();
-       })
-       .then(res => {
-            this.setState({
-                name: res['name'],
-                avatar_url: res['avatar_url'],
-                followers: res['followers'],
-                public_repos: res['public_repos']
-            });         
+    //    fetch(`https://api.github.com/users/${this.state.username}`)
+    //    .then(res => {
+    //        return res.json();
+    //    })
+    //    .then(res => {
+    //         this.setState({
+    //             name: res['name'],
+    //             avatar_url: res['avatar_url'],
+    //             followers: res['followers'],
+    //             public_repos: res['public_repos']
+    //         });         
 
-            //find repos
-            fetch(`https://api.github.com/users/${this.state.username}/repos`)
-            .then(res => {
-                return res.json();        
-            })
-            .then(res => {
-                for (const repo of res) {
-                    this.setState({
-                        repos:[...this.state.repos,repo]
-                    })
-                }
-                this.handleProfile();
-            })
-            .catch(err => console.log(err));
-       })
-       .catch(err => console.log(err));
+    //         //find repos
+    //         fetch(`https://api.github.com/users/${this.state.username}/repos`)
+    //         .then(res => {
+    //             return res.json();        
+    //         })
+    //         .then(res => {
+    //             for (const repo of res) {
+    //                 this.setState({
+    //                     repos:[...this.state.repos,repo]
+    //                 })
+    //             }
+    //             this.handleProfile();
+    //         })
+    //         .catch(err => console.log(err));
+    //    })
+    //    .catch(err => console.log(err));
     }
 
     handleProfile = () =>{
