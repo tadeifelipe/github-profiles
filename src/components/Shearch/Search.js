@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './style.css';
+import star from '../../assets/star.png'
 
 class Search extends Component {
     constructor(props) {
@@ -10,10 +11,7 @@ class Search extends Component {
             name: '',
             avatar_url: '',
             followers: '',
-            public_repos: '',
-            repos:[
-
-            ]
+            public_repos: ''
         }
     }
 
@@ -29,34 +27,36 @@ class Search extends Component {
             alert('Username não pode ser vazio.');
         }
 
-    //    fetch(`https://api.github.com/users/${this.state.username}`)
-    //    .then(res => {
-    //        return res.json();
-    //    })
-    //    .then(res => {
-    //         this.setState({
-    //             name: res['name'],
-    //             avatar_url: res['avatar_url'],
-    //             followers: res['followers'],
-    //             public_repos: res['public_repos']
-    //         });         
+       fetch(`https://api.github.com/users/${this.state.username}`)
+       .then(res => {
+           return res.json();
+       })
+       .then(res => {
+            this.setState({
+                name: res['name'],
+                avatar_url: res['avatar_url'],
+                followers: res['followers'],
+                public_repos: res['public_repos']
+            });         
 
-    //         //find repos
-    //         fetch(`https://api.github.com/users/${this.state.username}/repos`)
-    //         .then(res => {
-    //             return res.json();        
-    //         })
-    //         .then(res => {
-    //             for (const repo of res) {
-    //                 this.setState({
-    //                     repos:[...this.state.repos,repo]
-    //                 })
-    //             }
-    //             this.handleProfile();
-    //         })
-    //         .catch(err => console.log(err));
-    //    })
-    //    .catch(err => console.log(err));
+            //find repos
+            fetch(`https://api.github.com/users/${this.state.username}/repos`)
+            .then(res => {
+                return res.json();        
+            })
+            .then(res => {
+                var repos = '';
+
+                for (const repo of res) {                    
+                    repos = [...repos,repo]
+                }
+
+                this.handleProfile();
+                this.handleRepos(repos);
+            })
+            .catch(err => console.log(err));
+       })
+       .catch(err => console.log(err));
     }
 
     handleProfile = () =>{
@@ -68,6 +68,23 @@ class Search extends Component {
         
          ELEMENTS.avatar.src = this.state.avatar_url;
          ELEMENTS.name.innerHTML = this.state.name;
+    }
+
+    handleRepos = repos => {
+        var divs = '';
+        console.log(repos);
+        repos.forEach(repo => {
+            divs += `<div class="repo">
+                        <div class="repoContent">
+                            ${repo['name']}
+                            <div>
+                                ${repo['stargazers_count']} <img src=${star} alt="star"/>    
+                            </div>                                                                         
+                            <label>${repo['description']}</label>
+                        </div>
+                    </div>`;
+        });
+        document.getElementById('repos').innerHTML = divs;
     }
     
     render(){
