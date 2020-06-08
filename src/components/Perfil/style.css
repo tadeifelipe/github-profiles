@@ -12,7 +12,6 @@
     margin: 0;
 }
 
-
 .profile .name{
     background-color: lightgoldenrodyellow;
     text-align: center;
@@ -63,4 +62,20 @@
 
 .repoContent label {
     font-weight: normal;
+}
+
+.info {
+    max-width: 50%;
+    height: 100px;
+    padding-top: 10px;
+}
+.info div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.info label {
+    font-size: 12px;
+    font-weight: bold;
 }

@@ -63,16 +63,21 @@ class Search extends Component {
         document.getElementById('profile').style.visibility = 'visible';
          const ELEMENTS = {
              avatar: document.getElementById('img'),
-             name: document.getElementById('name')
+             name: document.getElementById('name'),
+             username: document.getElementById('username'),
+             followers: document.getElementById('followers'),
+             repos: document.getElementById('qtd_repos')
          }
         
          ELEMENTS.avatar.src = this.state.avatar_url;
          ELEMENTS.name.innerHTML = this.state.name;
+         ELEMENTS.username.innerHTML = this.state.username;
+         ELEMENTS.followers.innerHTML = `${this.state.followers} followers`;     
+         ELEMENTS.repos.innerHTML = this.state.public_repos;               
     }
 
     handleRepos = repos => {
         var divs = '';
-        console.log(repos);
         repos.forEach(repo => {
             divs += `<div class="repo">
                         <div class="repoContent">

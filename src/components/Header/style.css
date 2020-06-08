@@ -11,9 +11,9 @@
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 50px;
-    background-color: #ced6e0;
+    background-color: gray;
     border: none;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+    box-shadow: 1px 1px 5px gray;
     cursor: pointer;
     transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
@@ -25,4 +25,9 @@
 
 .button:focus{
     outline-style: none;
+}
+
+.button:active
+{
+    background-color: ced6e0;
 }
