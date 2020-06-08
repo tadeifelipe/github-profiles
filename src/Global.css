@@ -5,4 +5,5 @@ body{
     font: 40px Roboto, sans-serif;
     background-color: #d1d5da;
     /* background-color: #24292e; */
+    transition: background-color 1s ease;
 }

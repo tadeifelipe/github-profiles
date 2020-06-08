@@ -10,9 +10,8 @@ function App() {
     <>
       <Header />
       <Search />
-      <Perfil />         
+      <Perfil />   
    </>
   );
 }
-
 export default App;

@@ -6,20 +6,18 @@
 
 .button{
     background-image: url('../../assets/moon.png');
-    width: 80px;
-    height: 80px;
+    width: 75px;
+    height: 75px;
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 50px;
-    background-color: gray;
     border: none;
-    box-shadow: 1px 1px 5px gray;
+    box-shadow: 1px 1px 5px #d1d5da;
     cursor: pointer;
     transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .button:hover{
-    background-color: #dfe4ea;
     box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.4);
 }
 
