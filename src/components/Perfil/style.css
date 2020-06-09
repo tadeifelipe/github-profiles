@@ -79,3 +79,19 @@
     font-size: 12px;
     font-weight: bold;
 }
+
+@media(max-width: 798px){
+    .user{
+        flex-direction: column;
+    }
+
+    .repos{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;;
+    }
+
+    .user {
+        align-items: center;
+    }
+}
