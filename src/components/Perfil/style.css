@@ -94,4 +94,17 @@
     .user {
         align-items: center;
     }
+
+    .profile {
+        width: 100%;
+        align-items: center;
+    }
+
+    .name {
+        width: 100%;
+    }
+
+    .repo {
+        width: 100%;
+    }
 }

@@ -29,3 +29,13 @@
 {
     background-color: ced6e0;
 }
+
+@media(max-width: 798px){
+    .button{
+        width: 65px;
+        height: 65px;    
+    }
+    .container div{
+        text-align: center;
+    }
+}
