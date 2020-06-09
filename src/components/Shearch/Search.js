@@ -25,38 +25,38 @@ class Search extends Component {
     handleSearch = () =>{
         if(this.state.username === ''){
             alert('Username não pode ser vazio.');
-        }
-
-       fetch(`https://api.github.com/users/${this.state.username}`)
-       .then(res => {
-           return res.json();
-       })
-       .then(res => {
-            this.setState({
-                name: res['name'],
-                avatar_url: res['avatar_url'],
-                followers: res['followers'],
-                public_repos: res['public_repos']
-            });         
-
-            //find repos
-            fetch(`https://api.github.com/users/${this.state.username}/repos`)
+        }else{     
+            fetch(`https://api.github.com/users/${this.state.username}`)
             .then(res => {
-                return res.json();        
+                return res.json();
             })
             .then(res => {
-                var repos = '';
+                    this.setState({
+                        name: res['name'],
+                        avatar_url: res['avatar_url'],
+                        followers: res['followers'],
+                        public_repos: res['public_repos']
+                    });         
 
-                for (const repo of res) {                    
-                    repos = [...repos,repo]
+                    //find repos
+                    fetch(`https://api.github.com/users/${this.state.username}/repos`)
+                    .then(res => {
+                        return res.json();        
+                    })
+                    .then(res => {
+                        var repos = '';
+
+                        for (const repo of res) {                    
+                            repos = [...repos,repo]
+                        }
+
+                        this.handleProfile();
+                        this.handleRepos(repos);
+                    })
+                    .catch(err => console.log(err));
+            })
+            .catch(err => console.log(err));    
                 }
-
-                this.handleProfile();
-                this.handleRepos(repos);
-            })
-            .catch(err => console.log(err));
-       })
-       .catch(err => console.log(err));
     }
 
     handleProfile = () =>{
