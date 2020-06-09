@@ -73,7 +73,7 @@ class Search extends Component {
          ELEMENTS.name.innerHTML = this.state.name;
          ELEMENTS.username.innerHTML = this.state.username;
          ELEMENTS.followers.innerHTML = `${this.state.followers} followers`;     
-         ELEMENTS.repos.innerHTML = this.state.public_repos;               
+         ELEMENTS.repos.innerHTML = `${this.state.public_repos} repos` ;               
     }
 
     handleRepos = repos => {

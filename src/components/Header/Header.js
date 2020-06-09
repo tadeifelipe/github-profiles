@@ -8,7 +8,7 @@ class Header extends Component {
             <div className="container">        
                 <div>              
                     <img src={logo} alt={'Logo'} style={{height: '40px', color:'white'}}/> 
-                <label> Github Profiles</label>     
+                <label id="title"> Github Profiles</label>     
                 </div>
             
                 <div>
