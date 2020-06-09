@@ -12,7 +12,7 @@ class Perfil extends Component{
                     <img id = "img" src="" alt="Avatar of user"/>
                     <p id = "name" className="name">Felipe Tadei</p>
                     <div className="info">
-                        <div>
+                        <div> 
                             <img src={git} alt={'gituser'}/>
                             <label id="username"></label> 
                         </div>
