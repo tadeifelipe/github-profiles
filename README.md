@@ -2,4 +2,4 @@
 
 <img src="https://github.com/tadeifelipe/github-profiles/blob/master/image.jpg" />
 
-[Teste here](https://searchgithubprofile.herokuapp.com/).
+[Test here](https://searchgithubprofile.herokuapp.com/)
