@@ -1,5 +1,4 @@
 let dark = JSON.parse(localStorage.getItem('dark'));
-console.log('teste');
 
 const  handleTheme = () => {       
     if(dark){
