@@ -61,6 +61,7 @@ class Search extends Component {
 
     handleProfile = () =>{
         document.getElementById('profile').style.visibility = 'visible';
+        document.querySelector('.footer').style.position = 'relative';
          const ELEMENTS = {
              avatar: document.getElementById('img'),
              name: document.getElementById('name'),
